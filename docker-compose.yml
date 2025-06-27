@@ -5,6 +5,7 @@ x-shared:
   zammad-service: &zammad-service
     environment: &zammad-environment
       MEMCACHE_SERVERS: ${MEMCACHE_SERVERS:-zammad-memcached:11211}
+      STORAGE_BACKEND: FileSystem
       POSTGRESQL_DB: ${POSTGRES_DB:-zammad_production}
       POSTGRESQL_HOST: ${POSTGRES_HOST:-zammad-postgresql}
       POSTGRESQL_USER: ${POSTGRES_USER}
